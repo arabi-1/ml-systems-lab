@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Lab datasets: download manually, see each lab's data/README.md
+labs/**/data/raw/
+labs/**/data/processed/
