@@ -1,0 +1,4 @@
+-e .
+ruff
+pytest
+pytest-cov
