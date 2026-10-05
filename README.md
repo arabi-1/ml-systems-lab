@@ -10,6 +10,8 @@ Machine learning coursework implemented as tested, CI-checked Python code.
 |-----|-------|--------|
 | [Lab 04, Task 1](labs/lab04_decision_trees/titanic.py) | Decision tree: Titanic survival | Test accuracy 0.793 |
 | [Lab 04, Task 2](labs/lab04_decision_trees/car_evaluation.py) | Decision tree: UCI Car Evaluation | Test accuracy 0.991 (baseline 0.699) |
+| [Lab 05, Task 1](labs/lab05_linear_regression/salary.py) | Linear regression: Salary vs Experience | Test R2 0.975 |
+| [Lab 05, Task 2](labs/lab05_linear_regression/canada_income.py) | Linear regression: Canada per capita income | Test R2 0.875, test MAE 3,240.91 (baseline 8,428.37); 2020 prediction 41,027.68 (extrapolation beyond 1970-2016 training range) |
 
 ## Quick start
 
@@ -22,11 +24,15 @@ pip install -r requirements-dev.txt
 pytest
 ```
 
-Datasets are not committed. See [labs/lab04_decision_trees/data/README.md](labs/lab04_decision_trees/data/README.md) for download instructions, then run a lab:
+Datasets are not committed. See the data READMEs for download instructions
+([Lab 04](labs/lab04_decision_trees/data/README.md),
+[Lab 05](labs/lab05_linear_regression/data/README.md)), then run a lab:
 
 ```bash
 python -m labs.lab04_decision_trees.titanic
 python -m labs.lab04_decision_trees.car_evaluation
+python -m labs.lab05_linear_regression.salary
+python -m labs.lab05_linear_regression.canada_income
 ```
 
 ## Layout
