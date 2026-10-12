@@ -23,8 +23,11 @@ def load_data(path: Path = DATA_PATH) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
-def save_eda_plots(data: pd.DataFrame, output_directory: Path = Path.cwd()) -> None:
+def save_eda_plots(data: pd.DataFrame, output_directory: Path | None = None) -> None:
     """Save retention charts grouped by salary and department."""
+    if output_directory is None:
+        output_directory = Path.cwd()
+
     salary_retention = pd.crosstab(data["salary"], data[TARGET])
     salary_retention = salary_retention.rename(columns={0: "Not left", 1: "Left"})
     salary_retention.plot(kind="bar", title="Employee Retention by Salary")
