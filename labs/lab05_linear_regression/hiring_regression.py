@@ -5,7 +5,6 @@ from pathlib import Path
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-
 DATA_PATH = Path(__file__).parent / "data" / "hiring.csv"
 FEATURES = ["experience", "test_score", "interview_score"]
 TARGET = "salary"
