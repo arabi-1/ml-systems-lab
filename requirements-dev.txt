@@ -1,4 +1,4 @@
 -e .
-ruff
+ruff==0.16.10
 pytest
 pytest-cov
